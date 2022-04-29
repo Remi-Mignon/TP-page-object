@@ -5,10 +5,10 @@ from .basePage import BasePage
 class HomePage(BasePage):
 
     def openAllMenu(self):
-        self.clic(Locators.menu)
+        self.click(Locators.menu)
 
     def openBookCategory(self):
-        self.clic(Locators.booksMenu)
+        self.click(Locators.booksMenu)
 
     def openAllBooks(self):
-        self.clic(Locators.allBooksMenu)
+        self.click(Locators.allBooksMenu)

@@ -39,4 +39,4 @@ def test_page_object():
 
     assert cart.getQuantity() == quantity
 
-    base.setdown()
+    base.teardown()

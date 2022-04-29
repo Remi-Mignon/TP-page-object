@@ -5,4 +5,4 @@ from .basePage import BasePage
 class ConfirmationPage(BasePage):
 
     def openCart(self):
-        self.clic(Locators.cart)
+        self.click(Locators.cart)

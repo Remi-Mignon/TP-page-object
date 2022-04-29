@@ -5,4 +5,4 @@ from .basePage import BasePage
 class ProductPage(BasePage):
 
     def addToCart(self):
-        self.clic(Locators.addToCart)
+        self.click(Locators.addToCart)
