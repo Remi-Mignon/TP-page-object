@@ -16,3 +16,6 @@ class Locators:
 
     #ConfirmationPage
     cart = "#nav-cart"
+
+    #CartPage
+    quantitySelector = "#quantity"

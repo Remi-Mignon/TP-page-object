@@ -2,6 +2,8 @@ from pageObject.homePage import HomePage
 from pageObject.basePage import BasePage
 from pageObject.booksPage import BooksPage
 from pageObject.confirmationPage import ConfirmationPage
+from pageObject.cartPage import CartPage
+from pageObject.productPage import ProductPage
 
 from selenium import webdriver
 
@@ -25,27 +27,16 @@ def test_page_object():
     books = BooksPage(driver)
     books.selectFirstNewBook()
 
+    product = ProductPage(driver)
+    product.addToCart()
+
     confirmation = ConfirmationPage(driver)
     confirmation.openCart()
 
-    base.setdown()
+    quantity = "2"
+    cart = CartPage(driver)
+    cart.setQuantity(quantity)
 
-    """
-    CartPage
-    changeQuantity(int
-    quantity)
-    getQuantity()
-    
-    assert 2 == (WebElement)
-    quantity.text
-    
-    HomePage.openAllMenu()
-    HomePage.openBookCategory()
-    HomePage.openAllBooks()
-    BooksPage.selectFirstBookNouveautes()
-    ProductPage.addToCart()
-    ConfirmationPage.openCart()
-    CartPage.changeQuantity(2)
-    
-    assert 2 == CartPage.getQuantity()
-    """
+    assert cart.getQuantity() == quantity
+
+    base.setdown()
