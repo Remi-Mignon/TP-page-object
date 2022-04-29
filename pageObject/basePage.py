@@ -12,10 +12,10 @@ class BasePage:
 
     def setup(self):
         self.driver.get(Locators.amazonURL)
-        self.clic(Locators.cookie)
+        self.click(Locators.cookie)
 
-    def setdown(self):
+    def teardown(self):
         self.driver.quit()
 
-    def clic(self, locator):
+    def click(self, locator):
         self.wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, locator))).click()
