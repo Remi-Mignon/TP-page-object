@@ -13,3 +13,6 @@ class Locators:
 
     #ProductPage
     addToCart = "#add-to-cart-button"
+
+    #ConfirmationPage
+    cart = "#nav-cart"

@@ -1,6 +1,7 @@
 from pageObject.homePage import HomePage
 from pageObject.basePage import BasePage
 from pageObject.booksPage import BooksPage
+from pageObject.confirmationPage import ConfirmationPage
 
 from selenium import webdriver
 
@@ -24,12 +25,12 @@ def test_page_object():
     books = BooksPage(driver)
     books.selectFirstNewBook()
 
+    confirmation = ConfirmationPage(driver)
+    confirmation.openCart()
+
     base.setdown()
 
     """
-    ConfirmationPage
-    openCart()
-    
     CartPage
     changeQuantity(int
     quantity)
